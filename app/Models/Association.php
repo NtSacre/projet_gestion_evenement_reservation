@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Association extends Authenticatable
 {
-    use HasFactory;
+    
     protected $fillable = [
         'nom',
         'slogan',

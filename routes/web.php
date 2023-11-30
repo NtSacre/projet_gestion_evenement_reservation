@@ -83,6 +83,7 @@ Route::middleware(['authUser:client', 'is_user'])->group(function(){
     Route::prefix('reservation')->name('reservation.')->group(function(){
         Route::get('/create/{id}', [ReservationController::class, 'create'])->name('create');
        
+        Route::post('/store', [ReservationController::class, 'store'])->name('store');
     
        
         Route::post('/connexion', [ReservationController::class, 'connexion'])->name('connexion');

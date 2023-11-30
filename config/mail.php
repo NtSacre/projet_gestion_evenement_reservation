@@ -34,20 +34,15 @@ return [
     */
 
     'mailers' => [
-        'mailtrap' => [
-            'transport' => 'mailtrap',
-            // 'client' => [
-            //     'timeout' => 5,
-            // ],
-        ],
+        
         'smtp' => [
             'transport' => 'smtp',
             'url' => env('MAIL_URL'),
-            'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+            'host' => env('MAIL_HOST', 'smtp.gmail.com'),
             'port' => env('MAIL_PORT', 587),
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-            'username' => env('MAIL_USERNAME'),
-            'password' => env('MAIL_PASSWORD'),
+            'username' => env('MAIL_USERNAME', 'sacrentandou2.0@gmail.com'),
+            'password' => env('MAIL_PASSWORD', 'lfvttpqpkzwjydvf'),
             'timeout' => null,
             'local_domain' => env('MAIL_EHLO_DOMAIN'),
         ],
@@ -106,8 +101,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'sacrentandou2.0@gmail.com'),
+        'name' => env('MAIL_FROM_NAME', 'Ntandou'),
     ],
 
     /*

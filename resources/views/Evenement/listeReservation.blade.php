@@ -60,7 +60,7 @@
       <td class="d-flex gap-2 w-100 justify-content-end">
       @if($Even->is_accepted==0)
     
-        <form action="{{route('evenement.update', $Even->id)}}" method="POST">
+        <form action="{{route('evenement.updateReservation', $Even->id)}}" method="POST">
           @csrf
 
           <button type="submit" class="btn btn-danger">Décliner</button>

@@ -50,7 +50,7 @@ class ClientController extends Controller
 
 
         if (Client::create($ClientValided)) {
-            return redirect()->route('client.edit');
+            return redirect()->route('home.index');
         };
     }
 

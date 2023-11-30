@@ -43,7 +43,7 @@ class HomeControlleur extends Controller
         // if(auth()->guard('client')->check()){
         //     $EvenReserver= Reservation::where('user_id', Auth::guard('client')->user()->id)->pluck('evenement_id')->toArray();
         // }
-        $EvenReserver= auth()->guard('client')->check() ? Reservation::where('user_id', Auth::guard('client')->user()->id)->pluck('evenement_id')->toArray() : [];
+        $EvenReserver= auth()->guard('client')->check() ? Reservation::where('client_id', Auth::guard('client')->user()->id)->pluck('evenement_id')->toArray() : [];
        
         $Even= Evenement::where('id', $id)->first();
         return view('AllUsers.show', compact('Even', 'EvenReserver'));
